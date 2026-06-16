@@ -17,6 +17,7 @@ Available documentation. Fetch any file using:
 | MCP | [docs/mcp.md](docs/mcp.md) | MCP tools, resources, prompts registration |
 | External API | [docs/external-api.md](docs/external-api.md) | External API endpoints, API keys, OpenAPI docs |
 | Bindings | [docs/bindings.md](docs/bindings.md) | DB, KV, Storage, AI, RAG, Browser, Queues, Schedules |
+| Webapp Cron | [docs/webapp-cron.md](docs/webapp-cron.md) | App-level scheduled jobs (root dashnex.json `{cron, handler}`) vs module schedules |
 | Auth | [docs/auth.md](docs/auth.md) | Authentication, authorization, roles, guards |
 | CLI | [docs/cli.md](docs/cli.md) | Custom CLI commands |
 | Development | [docs/development.md](docs/development.md) | Dev setup, linking, testing, publishing |
