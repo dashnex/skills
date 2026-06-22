@@ -16,6 +16,29 @@
 - **`OAuthButton`** — universal OAuth provider button
 - **`DashnexLoginButton`** — Login with DashNex button
 
+## Current User Shape
+
+`useAuth()` (client) and `getUser(request)` (server) return the user in this shape:
+
+```ts
+{
+  id: string;
+  username: string;
+  roles: string[];
+  isConfirmed: boolean;
+  contact?: { firstName: string; lastName: string; image?: string; email: string };
+}
+```
+
+**Email lives on `contact`, not the top level.** Get it with:
+
+```tsx
+const { user } = useAuth();
+const email = user?.contact?.email;
+```
+
+`contact` is optional — it is populated by a handler of the `auth.user_format` event, so it may be absent if no module provides contact details. Always use optional chaining.
+
 ## Role Hierarchy
 
 `owner` > `admin` > `user` — each level inherits permissions from the level below. Avoid redundant role checks.
